@@ -1,0 +1,43 @@
+---
+sidebar_position: 2
+title: Sàng Eratosthenes
+description: Học sàng Eratosthenes bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Sàng Eratosthenes
+
+Khi cần tìm tất cả số nguyên tố tới một ngưỡng, sàng Eratosthenes nhanh hơn nhiều so với kiểm tra
+từng số một. Đây là một thuật toán cổ điển và rất đẹp.
+
+## Ý tưởng
+
+Ban đầu coi mọi số từ 2 trở lên đều là số nguyên tố. Lần lượt lấy số nguyên tố nhỏ nhất chưa xét,
+rồi gạch bỏ tất cả các bội của nó. Khi đã gạch xong, những số không bị gạch chính là các số nguyên
+tố. Một mẹo tối ưu: chỉ cần gạch bắt đầu từ `p²`, vì mọi bội nhỏ hơn đã bị gạch bởi số nguyên tố
+nhỏ hơn rồi.
+
+## Trực quan hoá
+
+Quan sát các bội bị gạch mờ dần, để lại các số nguyên tố màu xanh.
+
+<Algo kind="visualizer" algo="sieve" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="sieve" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="sieve" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="sieve" />
+
+## Tóm tắt
+
+- Gạch bội của từng số nguyên tố; số còn lại là nguyên tố.
+- Độ phức tạp khoảng `O(n log log n)`, rất nhanh để liệt kê số nguyên tố.
+- So với kiểm tra từng số bằng phép chia thử, sàng hiệu quả hơn nhiều khi cần xét cả một dải số.

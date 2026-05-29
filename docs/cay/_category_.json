@@ -1,6 +1,6 @@
 {
   "label": "Cây",
-  "position": 4,
+  "position": 5,
   "className": "menu-tree",
   "link": {
     "type": "generated-index",

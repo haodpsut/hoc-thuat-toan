@@ -1,6 +1,6 @@
 {
   "label": "Mảng",
-  "position": 5,
+  "position": 6,
   "className": "menu-array",
   "link": {
     "type": "generated-index",

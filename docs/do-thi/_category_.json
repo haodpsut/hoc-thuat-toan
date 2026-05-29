@@ -1,6 +1,6 @@
 {
   "label": "Đồ thị",
-  "position": 3,
+  "position": 4,
   "className": "menu-graph",
   "link": {
     "type": "generated-index",

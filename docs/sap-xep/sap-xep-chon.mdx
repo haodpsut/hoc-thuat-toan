@@ -1,0 +1,39 @@
+---
+sidebar_position: 3
+title: Sắp xếp chọn
+description: Học sắp xếp chọn bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Sắp xếp chọn
+
+Sắp xếp chọn (selection sort) là một thuật toán sắp xếp đơn giản khác, đáng chú ý vì số lần đổi chỗ
+rất ít.
+
+## Ý tưởng
+
+Chia mảng thành phần đã sắp ở đầu và phần chưa sắp ở sau. Mỗi vòng, quét toàn bộ phần chưa sắp để
+tìm phần tử nhỏ nhất, rồi đổi nó lên đầu phần chưa sắp. Lặp lại cho tới khi cả mảng được sắp.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="selection-sort" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="selection-sort" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="selection-sort" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="selection-sort" />
+
+## Tóm tắt
+
+- Mỗi vòng chọn phần tử nhỏ nhất còn lại đưa lên đầu.
+- Số phép so sánh luôn `O(n²)`, kể cả khi mảng đã sắp.
+- Số lần hoán đổi tối đa chỉ `n`, ít hơn hẳn nổi bọt.

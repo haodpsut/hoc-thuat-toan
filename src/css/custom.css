@@ -72,6 +72,7 @@
   background: transparent;
 }
 .menu-sort > .menu__list-item-collapsible > .menu__link::before { content: '🔢'; margin-right: 9px; }
+.menu-search > .menu__list-item-collapsible > .menu__link::before { content: '🔍'; margin-right: 9px; }
 .menu-graph > .menu__list-item-collapsible > .menu__link::before { content: '🕸️'; margin-right: 9px; }
 .menu-tree > .menu__list-item-collapsible > .menu__link::before { content: '🌳'; margin-right: 9px; }
 .menu-array > .menu__list-item-collapsible > .menu__link::before { content: '🧮'; margin-right: 9px; }

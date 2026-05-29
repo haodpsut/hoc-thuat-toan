@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+title: Tìm kiếm tuyến tính
+description: Học tìm kiếm tuyến tính bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tìm kiếm tuyến tính
+
+Tìm kiếm tuyến tính là cách tìm một giá trị trong mảng đơn giản nhất: cứ duyệt lần lượt từng phần
+tử cho tới khi gặp.
+
+## Ý tưởng
+
+Đi từ đầu mảng, so sánh từng phần tử với giá trị cần tìm. Gặp đúng thì trả về vị trí ngay; đi hết
+mảng mà không gặp thì kết luận không có. Ưu điểm là không cần mảng đã sắp và cài đặt rất dễ.
+
+## Trực quan hoá
+
+Nhập mảng và giá trị cần tìm, rồi chạy từng bước.
+
+<Algo kind="visualizer" algo="linear-search" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="linear-search" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="linear-search" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="linear-search" />
+
+## Tóm tắt
+
+- Duyệt tuần tự, gặp là trả về vị trí.
+- Độ phức tạp `O(n)`, tốt nhất `O(1)`.
+- Không cần mảng đã sắp. Với mảng lớn đã sắp, hãy dùng tìm kiếm nhị phân.

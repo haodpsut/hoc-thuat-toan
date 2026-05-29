@@ -1,0 +1,10 @@
+{
+  "label": "Tìm kiếm",
+  "position": 3,
+  "className": "menu-search",
+  "link": {
+    "type": "generated-index",
+    "slug": "/tim-kiem",
+    "description": "Các thuật toán tìm kiếm, mỗi bài kèm hình trực quan, code chạy được và bài tập có chấm."
+  }
+}

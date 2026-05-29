@@ -109,9 +109,11 @@ export interface Algorithm {
   problems: Problem[];
 
   // Array visualization (sorting/searching/traversal):
-  curated?: (a: number[]) => Step[];
+  curated?: (a: number[], target?: number) => Step[];
   arrayLegend?: [string, string][]; // legend [highlightClass, label] for the bar view
   defaultInput?: string; // default array text for the input box
+  needsTarget?: boolean; // show a "tìm giá trị" box and pass it to curated
+  defaultTarget?: number;
 
   // Graph / tree visualization:
   nodes?: GraphNode[];

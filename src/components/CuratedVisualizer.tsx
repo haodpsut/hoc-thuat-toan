@@ -38,8 +38,13 @@ export function CuratedVisualizer({ algo }: { algo: Algorithm }) {
   const legend = algo.arrayLegend ?? LEGEND;
   const [text, setText] = useState(initial);
   const [array, setArray] = useState<number[]>(() => parseArray(initial));
+  const [targetText, setTargetText] = useState(String(algo.defaultTarget ?? 9));
+  const [target, setTarget] = useState<number>(algo.defaultTarget ?? 9);
 
-  const trace = useMemo(() => (algo.curated ? algo.curated(array) : []), [algo, array]);
+  const trace = useMemo(
+    () => (algo.curated ? algo.curated(array, target) : []),
+    [algo, array, target],
+  );
   const maxVal = useMemo(
     () => Math.max(1, ...trace.flatMap((s) => s.array)),
     [trace],
@@ -47,7 +52,10 @@ export function CuratedVisualizer({ algo }: { algo: Algorithm }) {
   const { cur, playing, speed, setSpeed, play, step, goto } = usePlayer(trace.length);
   const s = trace[Math.min(cur, trace.length - 1)];
 
-  const apply = () => setArray(parseArray(text));
+  const apply = () => {
+    setArray(parseArray(text));
+    setTarget(parseInt(targetText, 10) || 0);
+  };
   const randomize = () => {
     const base = [5, 2, 8, 1, 9, 3, 7, 4, 6];
     for (let k = base.length - 1; k > 0; k--) {
@@ -59,9 +67,10 @@ export function CuratedVisualizer({ algo }: { algo: Algorithm }) {
     setArray(arr);
   };
 
+  // Index-like variables shown as labels above the bars.
   const pointers: Record<number, string[]> = {};
   if (s) {
-    for (const name of ['i', 'j']) {
+    for (const name of ['i', 'j', 'lo', 'hi', 'mid', 'm', 'd']) {
       const v = s.vars[name];
       if (typeof v === 'number' && v >= 0 && v < s.array.length) {
         (pointers[v] ||= []).push(name);
@@ -81,6 +90,18 @@ export function CuratedVisualizer({ algo }: { algo: Algorithm }) {
             onChange={(e) => setText(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && apply()}
           />
+          {algo.needsTarget && (
+            <>
+              <label>Tìm giá trị</label>
+              <input
+                type="text"
+                value={targetText}
+                style={{ width: 64, textAlign: 'center' }}
+                onChange={(e) => setTargetText(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && apply()}
+              />
+            </>
+          )}
           <button onClick={apply}>Áp dụng</button>
           <button onClick={randomize}>Ngẫu nhiên</button>
         </div>

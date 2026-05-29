@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+title: Tìm kiếm nhị phân
+description: Học tìm kiếm nhị phân bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tìm kiếm nhị phân
+
+Tìm kiếm nhị phân là một trong những thuật toán quan trọng nhất: nhờ tận dụng mảng đã sắp, nó tìm
+một giá trị chỉ trong khoảng `log n` bước thay vì `n` bước.
+
+## Ý tưởng
+
+Trên mảng đã sắp, ta giữ một khoảng tìm kiếm bằng hai biên `lo` và `hi`. Mỗi bước, xét phần tử ở
+giữa khoảng: nếu bằng giá trị cần tìm thì xong; nếu phần tử giữa nhỏ hơn thì giá trị cần tìm chỉ có
+thể nằm ở nửa phải, ngược lại nằm ở nửa trái. Cứ thế, mỗi bước loại bỏ một nửa khoảng.
+
+## Trực quan hoá
+
+Nhập mảng (sẽ được sắp tự động) và giá trị cần tìm. Quan sát nửa bị loại mờ đi sau mỗi bước.
+
+<Algo kind="visualizer" algo="binary-search" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="binary-search" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="binary-search" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="binary-search" />
+
+## Tóm tắt
+
+- Chỉ dùng được trên mảng đã sắp.
+- Mỗi bước cắt đôi phạm vi, nên độ phức tạp `O(log n)`.
+- Cẩn thận tính `mid` và cập nhật `lo`, `hi` để vòng lặp luôn thu hẹp và dừng.
