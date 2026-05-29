@@ -17,11 +17,10 @@ export default function Algo({ kind, algo }: { kind: Kind; algo: string }) {
           const a = ALGORITHMS[algo];
           let Comp: React.ComponentType<{ algo: unknown }>;
           if (kind === 'visualizer') {
-            // Route the visualizer by data-structure type: array vs graph/tree.
-            Comp =
-              a.viz === 'graph'
-                ? require('../components/GraphVisualizer').GraphVisualizer
-                : require('../components/CuratedVisualizer').CuratedVisualizer;
+            // Route the visualizer by data-structure type: array / graph / string.
+            if (a.viz === 'graph') Comp = require('../components/GraphVisualizer').GraphVisualizer;
+            else if (a.viz === 'string') Comp = require('../components/StringVisualizer').StringVisualizer;
+            else Comp = require('../components/CuratedVisualizer').CuratedVisualizer;
           } else if (kind === 'playback') Comp = require('../components/CodePlayback').CodePlayback;
           else if (kind === 'complexity') Comp = require('../components/Complexity').Complexity;
           else Comp = require('../components/Playground').Playground;

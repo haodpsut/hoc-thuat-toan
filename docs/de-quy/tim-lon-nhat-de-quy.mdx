@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+title: Tìm lớn nhất đệ quy
+description: Học tư duy đệ quy qua bài tìm phần tử lớn nhất, bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tìm lớn nhất đệ quy
+
+Tìm phần tử lớn nhất của mảng cũng có thể viết bằng đệ quy, theo cùng tư duy chia bài toán thành một
+phần nhỏ hơn rồi gộp kết quả.
+
+## Ý tưởng
+
+Phần tử lớn nhất của mảng tính từ vị trí `i` được xác định như sau: nếu `i` đã là phần tử cuối thì
+lớn nhất chính là `a[i]`; ngược lại, lớn nhất là giá trị lớn hơn giữa `a[i]` và lớn nhất của phần
+còn lại `a[i+1:]`. Pha đi xuống lần lượt thu hẹp mảng cho tới phần tử cuối làm neo, rồi pha quay lui
+so từng phần tử với ứng viên lớn nhất tìm được phía sau.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="recursive-max" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="recursive-max" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="recursive-max" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="recursive-max" />
+
+## Tóm tắt
+
+- Lớn nhất của `a[i:]` là giá trị lớn hơn giữa `a[i]` và lớn nhất của `a[i+1:]`.
+- Neo là phần tử cuối mảng, nên hàm yêu cầu mảng không rỗng.
+- Thời gian `O(n)`, bộ nhớ ngăn xếp `O(n)` do đệ quy đi sâu `n` tầng.

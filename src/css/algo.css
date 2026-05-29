@@ -100,6 +100,27 @@
 .algo-ui .spin { width: 14px; height: 14px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: algo-sp .8s linear infinite; display: inline-block; }
 @keyframes algo-sp { to { transform: rotate(360deg); } }
 
+/* String view */
+.algo-ui .strview { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; padding: 28px 8px 12px; border-bottom: 1px solid var(--border); min-height: 90px; align-items: flex-end; }
+.algo-ui .cell { position: relative; width: 38px; height: 46px; border-radius: 8px; background: var(--panel-2); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; transition: background .16s ease, outline-color .15s; }
+.algo-ui .cell .ch { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--text); }
+.algo-ui .cell .idx { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+.algo-ui .cell.compare { background: var(--compare); }
+.algo-ui .cell.compare .ch { color: #0b1020; }
+.algo-ui .cell.match { background: var(--sorted); }
+.algo-ui .cell.match .ch { color: #0b1020; }
+.algo-ui .cell.mismatch { background: var(--swap); }
+.algo-ui .cell.mismatch .ch { color: #fff; }
+.algo-ui .cell.window { background: var(--accent); }
+.algo-ui .cell.window .ch { color: #0b1020; }
+.algo-ui .cell.found { background: var(--found); outline: 3px solid #fff; outline-offset: 2px; }
+.algo-ui .cell.found .ch { color: #0b1020; }
+.algo-ui .cell .ptr { position: absolute; top: -20px; font-size: 11px; color: var(--accent); font-weight: 700; white-space: nowrap; }
+
+/* Graph weight + distance labels */
+.algo-ui .edge-weight { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+.algo-ui .node-dist { font-family: var(--mono); font-size: 10px; fill: var(--accent); font-weight: 700; }
+
 .algo-ui p { margin: 0 0 10px; }
 .algo-ui .tag { font-family: var(--mono); font-size: 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 999px; padding: 3px 11px; }
 .algo-ui .tag b { color: var(--accent); }

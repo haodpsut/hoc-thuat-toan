@@ -1,0 +1,42 @@
+---
+sidebar_position: 1
+title: Phần tử lớn hơn tiếp theo
+description: Học ngăn xếp đơn điệu qua bài phần tử lớn hơn tiếp theo, có hình trực quan, code Python chạy được và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Phần tử lớn hơn tiếp theo
+
+Với mỗi phần tử trong mảng, ta muốn biết phần tử đầu tiên ở bên phải nó mà lớn hơn nó là phần tử nào.
+Đây là bài toán kinh điển để làm quen với kỹ thuật ngăn xếp đơn điệu.
+
+## Ý tưởng
+
+Cách ngây thơ là với mỗi phần tử lại dò sang phải tìm phần tử lớn hơn, tốn `O(n²)`. Mẹo ngăn xếp đơn
+điệu giúp giải trong `O(n)`: duyệt mảng từ trái sang phải, giữ một ngăn xếp các chỉ số đang chờ tìm
+phần tử lớn hơn. Khi gặp một giá trị lớn hơn phần tử ở đỉnh ngăn xếp, chính giá trị đó là phần tử lớn
+hơn tiếp theo của phần tử ở đỉnh; ta lấy đỉnh ra rồi lặp lại. Mỗi chỉ số chỉ vào và ra ngăn xếp đúng
+một lần.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="next-greater" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="next-greater" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="next-greater" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="next-greater" />
+
+## Tóm tắt
+
+- Ngăn xếp giữ các chỉ số chưa tìm được phần tử lớn hơn bên phải.
+- Khi gặp phần tử lớn hơn đỉnh ngăn xếp, đỉnh được giải quyết ngay với giá trị đó.
+- Mỗi phần tử vào ra ngăn xếp một lần nên tổng chi phí là `O(n)`, nhanh hơn cách duyệt hai vòng.

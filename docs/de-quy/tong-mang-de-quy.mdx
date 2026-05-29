@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+title: Tổng mảng đệ quy
+description: Học tư duy đệ quy qua bài tính tổng mảng, bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tổng mảng đệ quy
+
+Tính tổng các phần tử của một mảng là bài toán quen thuộc với vòng lặp. Ở đây ta giải nó bằng đệ quy
+để làm quen với cách một bài toán tự định nghĩa qua chính nó nhỏ hơn.
+
+## Ý tưởng
+
+Tổng của mảng tính từ vị trí `i` bằng `a[i]` cộng với tổng của phần còn lại tính từ vị trí `i + 1`.
+Khi `i` chạm tới cuối mảng, phần còn lại rỗng nên tổng bằng `0`; đó là neo (base case) để đệ quy
+dừng. Quá trình có hai pha: pha đi xuống lần lượt gọi hàm cho hậu tố ngắn dần cho tới khi chạm đáy,
+rồi pha quay lui cộng dồn từng phần tử từ cuối về đầu.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="recursive-sum" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="recursive-sum" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="recursive-sum" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="recursive-sum" />
+
+## Tóm tắt
+
+- Tổng của `a[i:]` bằng `a[i]` cộng tổng của `a[i+1:]`, neo là mảng rỗng trả `0`.
+- Pha đi xuống thu hẹp dần mảng, pha quay lui cộng dồn từ cuối về đầu.
+- Thời gian `O(n)` như vòng lặp, nhưng tốn thêm `O(n)` bộ nhớ ngăn xếp đệ quy.

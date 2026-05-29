@@ -60,6 +60,7 @@ export function GraphVisualizer({ algo }: { algo: Algorithm }) {
             edges={algo.edges ?? []}
             nodeState={s.nodeState}
             activeEdges={s.activeEdges}
+            dist={s.dist}
           />
         )}
 

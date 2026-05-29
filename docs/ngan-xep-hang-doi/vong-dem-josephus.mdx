@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+title: Vòng đếm Josephus
+description: Học mô phỏng hàng đợi qua bài toán Josephus, có hình trực quan, code Python chạy được và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Vòng đếm Josephus
+
+Bài toán Josephus là một ví dụ đẹp để làm quen với hàng đợi: n người đứng thành vòng tròn, cứ đếm tới
+người thứ k thì người đó bị loại, lặp lại tới khi chỉ còn một người sống sót.
+
+## Ý tưởng
+
+Ta mô phỏng trực tiếp bằng một hàng đợi. Lần lượt chuyển k-1 người từ đầu hàng xuống cuối hàng, đó là
+những người an toàn trong lượt đếm này, rồi loại người đang đứng đầu vì đó chính là người thứ k. Sau
+mỗi lần loại, ta tiếp tục đếm từ người kế tiếp. Khi hàng đợi chỉ còn một người thì đó là người sống sót.
+Trong phần trực quan, ô đang đếm được tô sáng, ô đã bị loại bị làm mờ, và người sống sót cuối cùng được
+đánh dấu riêng.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="josephus" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="josephus" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="josephus" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="josephus" />
+
+## Tóm tắt
+
+- Mô phỏng bằng hàng đợi: chuyển k-1 người ra sau rồi loại người ở đầu.
+- Lặp tới khi còn một người, đó là người sống sót.
+- Cách mô phỏng tốn khoảng `O(n·k)`; ngoài ra còn công thức truy hồi tính nhanh hơn nếu chỉ cần vị trí sống sót.

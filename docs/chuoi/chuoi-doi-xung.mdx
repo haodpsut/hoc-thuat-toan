@@ -1,0 +1,38 @@
+---
+sidebar_position: 1
+title: Chuỗi đối xứng
+description: Kiểm tra chuỗi đối xứng bằng hai con trỏ, có hình trực quan và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Chuỗi đối xứng
+
+Một chuỗi đối xứng (palindrome) đọc xuôi hay ngược đều giống nhau, ví dụ "racecar" hay "abba".
+
+## Ý tưởng
+
+Dùng hai con trỏ: một ở đầu chuỗi, một ở cuối. So sánh hai ký tự đối nhau rồi cùng tiến vào giữa.
+Nếu mọi cặp đều khớp thì chuỗi đối xứng; chỉ cần một cặp khác nhau là kết luận không đối xứng.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="palindrome" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="palindrome" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="palindrome" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="palindrome" />
+
+## Tóm tắt
+
+- Hai con trỏ từ hai đầu vào giữa, so sánh từng cặp.
+- Độ phức tạp `O(n)`, bộ nhớ `O(1)`.
+- Dừng sớm ngay khi gặp cặp ký tự khác nhau.

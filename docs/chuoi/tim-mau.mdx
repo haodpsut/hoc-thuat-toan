@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+title: Tìm mẫu trong chuỗi
+description: Tìm vị trí một mẫu trong chuỗi bằng phương pháp trực tiếp, có hình trực quan và bài tập.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tìm mẫu trong chuỗi
+
+Cho một chuỗi lớn s và một mẫu p, ta muốn tìm vị trí đầu tiên p xuất hiện trong s. Đây là bài toán
+nền tảng trong xử lý văn bản.
+
+## Ý tưởng
+
+Cách trực tiếp (naive): thử đặt mẫu p vào mọi vị trí bắt đầu có thể trong s, rồi so sánh từng ký
+tự. Nếu khớp hết thì trả về vị trí; nếu lệch ở đâu thì dịch mẫu sang phải một bước và thử lại.
+
+## Trực quan hoá
+
+Nhập chuỗi và mẫu, quan sát cửa sổ trượt và các phép so sánh từng ký tự.
+
+<Algo kind="visualizer" algo="pattern-search" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="pattern-search" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="pattern-search" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="pattern-search" />
+
+## Tóm tắt
+
+- Thử mọi vị trí bắt đầu, so khớp từng ký tự.
+- Xấu nhất `O(n·m)`; các thuật toán KMP, Rabin-Karp đạt `O(n + m)`.
+- Là bước khởi đầu để hiểu các thuật toán so khớp chuỗi nâng cao.

@@ -1,0 +1,10 @@
+{
+  "label": "Đồ thị có trọng số",
+  "position": 11,
+  "className": "menu-weighted",
+  "link": {
+    "type": "generated-index",
+    "slug": "/do-thi-trong-so",
+    "description": "Thuật toán trên đồ thị có trọng số, kèm hình trực quan trọng số và khoảng cách, code chạy được và bài tập."
+  }
+}

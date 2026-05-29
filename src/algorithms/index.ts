@@ -17,6 +17,13 @@ import { maxSubarray } from './maxSubarray';
 import { lis } from './lis';
 import { maxWindowSum } from './maxWindowSum';
 import { movingSums } from './movingSums';
+import { stringPalindrome } from './stringPalindrome';
+import { patternSearch } from './patternSearch';
+import { dijkstra } from './dijkstra';
+import { nextGreater } from './nextGreater';
+import { josephus } from './josephus';
+import { recursiveSum } from './recursiveSum';
+import { recursiveMax } from './recursiveMax';
 
 // Registry of all algorithms, keyed by id. Adding a new algorithm = add one
 // entry here and one MDX article. The engine and widgets stay untouched.
@@ -39,4 +46,11 @@ export const ALGORITHMS: Record<string, Algorithm> = {
   lis,
   'max-window-sum': maxWindowSum,
   'moving-sums': movingSums,
+  palindrome: stringPalindrome,
+  'pattern-search': patternSearch,
+  dijkstra,
+  'next-greater': nextGreater,
+  josephus,
+  'recursive-sum': recursiveSum,
+  'recursive-max': recursiveMax,
 };

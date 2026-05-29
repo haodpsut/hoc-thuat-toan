@@ -80,17 +80,32 @@ export interface GraphNode {
 export interface GraphEdge {
   from: number;
   to: number;
+  weight?: number; // optional edge weight (drawn for weighted graphs / Dijkstra)
 }
 
 export interface GraphStep {
   nodeState: Record<number, NodeState>;
   activeEdges: string[]; // edge keys `${from}-${to}` (undirected: both orders accepted)
+  dist?: Record<number, string>; // optional per-node label (e.g. shortest distance)
   line: number;
   vars: Vars;
   note: string;
 }
 
-export type VizKind = 'array' | 'graph';
+// ---- String visualization model ----
+// A string drawn as a row of character cells with per-index highlight states.
+export type CharState = 'idle' | 'compare' | 'match' | 'mismatch' | 'window' | 'found';
+
+export interface StringStep {
+  chars: string[];
+  state: Record<number, CharState>;
+  pointers: Record<number, string[]>; // index -> labels (e.g. {0:['i'], 3:['j']})
+  line: number;
+  vars: Vars;
+  note: string;
+}
+
+export type VizKind = 'array' | 'graph' | 'string';
 
 export interface Algorithm {
   id: string;
@@ -119,7 +134,14 @@ export interface Algorithm {
   // Graph / tree visualization:
   nodes?: GraphNode[];
   edges?: GraphEdge[];
-  starts?: number[]; // selectable start nodes (BFS); omit for tree build
+  starts?: number[]; // selectable start nodes (BFS / Dijkstra); omit for tree build
   graphCurated?: (start?: number) => GraphStep[];
   nodeLegend?: [NodeState, string][]; // legend labels for the graph view
+
+  // String visualization:
+  stringCurated?: (s: string, pattern?: string) => StringStep[];
+  defaultString?: string;
+  needsPattern?: boolean; // show a second text box (e.g. the pattern to find)
+  defaultPattern?: string;
+  charLegend?: [CharState, string][];
 }

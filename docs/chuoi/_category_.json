@@ -1,0 +1,10 @@
+{
+  "label": "Chuỗi",
+  "position": 10,
+  "className": "menu-string",
+  "link": {
+    "type": "generated-index",
+    "slug": "/chuoi",
+    "description": "Các thuật toán trên chuỗi ký tự, kèm hình trực quan, code chạy được và bài tập có chấm."
+  }
+}

@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+title: Đường đi ngắn nhất (Dijkstra)
+description: Thuật toán Dijkstra tìm đường đi ngắn nhất, có hình trực quan trọng số và khoảng cách, bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Đường đi ngắn nhất (Dijkstra)
+
+Dijkstra tìm khoảng cách ngắn nhất từ một đỉnh nguồn tới mọi đỉnh khác trên đồ thị có trọng số
+không âm. Đây là một trong những thuật toán đồ thị được dùng nhiều nhất, từ bản đồ chỉ đường tới
+định tuyến mạng.
+
+## Ý tưởng
+
+Giữ một khoảng cách tạm cho mỗi đỉnh, ban đầu nguồn bằng 0 và mọi đỉnh khác là vô cùng. Lặp lại:
+chọn đỉnh chưa chốt có khoảng cách tạm nhỏ nhất, coi khoảng cách đó là tối ưu (chốt nó), rồi dùng
+nó để nới lỏng các đỉnh kề (nếu đi qua nó cho đường ngắn hơn thì cập nhật). Vì luôn chốt đỉnh gần
+nhất trước, cách làm tham lam này cho kết quả đúng, miễn là mọi trọng số không âm.
+
+## Trực quan hoá
+
+Số trên cạnh là trọng số, nhãn `d=` trên mỗi đỉnh là khoảng cách tạm. Chọn đỉnh nguồn rồi chạy
+từng bước để xem các đỉnh được chốt và cây đường đi ngắn nhất hình thành.
+
+<Algo kind="visualizer" algo="dijkstra" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="dijkstra" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="dijkstra" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="dijkstra" />
+
+## Tóm tắt
+
+- Luôn chốt đỉnh chưa thăm có khoảng cách tạm nhỏ nhất, rồi nới lỏng các cạnh kề.
+- Dùng hàng đợi ưu tiên cho `O((V + E) log V)`.
+- Chỉ đúng với trọng số không âm; có cạnh âm thì dùng Bellman-Ford.
