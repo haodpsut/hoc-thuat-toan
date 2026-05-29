@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+title: Tổng đoạn con lớn nhất
+description: Học thuật toán Kadane bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tổng đoạn con lớn nhất
+
+Cho một mảng số có cả số âm, ta cần tìm đoạn con liên tiếp có tổng lớn nhất. Thuật toán Kadane giải
+bài toán này trong một lần duyệt, là một ví dụ quy hoạch động rất gọn gàng.
+
+## Ý tưởng
+
+Gọi `cur` là tổng lớn nhất của đoạn con kết thúc tại vị trí `i`. Khi sang phần tử mới `a[i]`, ta có
+hai lựa chọn: nối `a[i]` vào đoạn con trước đó, hoặc bắt đầu một đoạn con mới chỉ gồm `a[i]`. Ta chọn
+phương án cho tổng lớn hơn, tức `cur = max(a[i], cur + a[i])`. Trong khi duyệt, ta luôn ghi lại `best`
+là tổng lớn nhất từng gặp.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="max-subarray" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="max-subarray" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="max-subarray" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="max-subarray" />
+
+## Tóm tắt
+
+- `cur` là tổng đoạn con tốt nhất kết thúc tại `i`, cập nhật bằng `max(a[i], cur + a[i])`.
+- `best` ghi lại tổng lớn nhất từng gặp trong suốt quá trình duyệt.
+- Chỉ một lần duyệt nên độ phức tạp là `O(n)`, bộ nhớ `O(1)`.

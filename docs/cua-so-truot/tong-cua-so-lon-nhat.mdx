@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+title: Tổng cửa sổ k lớn nhất
+description: Học kỹ thuật cửa sổ trượt bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tổng cửa sổ k lớn nhất
+
+Cho một mảng số và độ rộng `k`, hãy tìm tổng lớn nhất của `k` phần tử liên tiếp. Đây là bài toán
+kinh điển để làm quen với kỹ thuật cửa sổ trượt.
+
+## Ý tưởng
+
+Cách ngây thơ là với mỗi vị trí lại cộng lại `k` phần tử, tốn `O(n·k)`. Cửa sổ trượt làm nhanh hơn:
+ta tính tổng `k` phần tử đầu, rồi mỗi lần dịch cửa sổ sang phải một bước, ta cộng thêm phần tử mới
+vào bên phải và trừ đi phần tử cũ rơi ra bên trái. Nhờ vậy mỗi bước chỉ tốn vài phép tính và ta luôn
+giữ lại tổng lớn nhất gặp được.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="max-window-sum" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="max-window-sum" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="max-window-sum" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="max-window-sum" />
+
+## Tóm tắt
+
+- Cửa sổ trượt tái sử dụng tổng cũ: cộng phần tử mới, trừ phần tử cũ.
+- Toàn bộ chạy trong `O(n)`, nhanh hơn cách cộng lại `O(n·k)`.
+- Nhớ xử lý ca biên: `k <= 0` hoặc `k > len(a)` thì trả về 0.

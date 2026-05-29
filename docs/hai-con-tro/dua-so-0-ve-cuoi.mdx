@@ -1,0 +1,40 @@
+---
+sidebar_position: 2
+title: Đưa số 0 về cuối
+description: Học cách dồn số 0 về cuối mảng bằng con trỏ đọc và con trỏ ghi, với hình trực quan, code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Đưa số 0 về cuối
+
+Đưa số 0 về cuối (move zeroes) là ví dụ tiêu biểu của hai con trỏ chạy cùng chiều: một con trỏ đọc quét
+mảng, một con trỏ ghi đánh dấu vị trí kế tiếp để đặt phần tử hợp lệ.
+
+## Ý tưởng
+
+Dùng con trỏ ghi w bắt đầu ở 0 và con trỏ đọc i quét toàn mảng. Mỗi khi i gặp một phần tử khác 0, ta
+chép nó xuống vị trí w rồi tăng w lên. Sau khi đọc hết, mọi phần tử khác 0 đã nằm gọn ở đầu theo đúng
+thứ tự cũ; ta chỉ cần lấp số 0 vào phần còn lại từ w tới hết mảng.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="move-zeroes" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="move-zeroes" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="move-zeroes" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="move-zeroes" />
+
+## Tóm tắt
+
+- Con trỏ đọc i quét mảng, con trỏ ghi w giữ vị trí đặt phần tử khác 0 kế tiếp.
+- Thứ tự tương đối của các phần tử khác 0 được giữ nguyên.
+- Một lượt duyệt là đủ, độ phức tạp `O(n)`, bộ nhớ phụ `O(1)`.

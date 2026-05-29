@@ -10,6 +10,13 @@ import { bst } from './bst';
 import { treeTraversal } from './treeTraversal';
 import { primeCheck } from './primeCheck';
 import { sieve } from './sieve';
+import { reverseArray } from './reverseArray';
+import { moveZeroes } from './moveZeroes';
+import { twoSumSorted } from './twoSumSorted';
+import { maxSubarray } from './maxSubarray';
+import { lis } from './lis';
+import { maxWindowSum } from './maxWindowSum';
+import { movingSums } from './movingSums';
 
 // Registry of all algorithms, keyed by id. Adding a new algorithm = add one
 // entry here and one MDX article. The engine and widgets stay untouched.
@@ -25,4 +32,11 @@ export const ALGORITHMS: Record<string, Algorithm> = {
   'tree-traversal': treeTraversal,
   'prime-check': primeCheck,
   sieve,
+  'reverse-array': reverseArray,
+  'move-zeroes': moveZeroes,
+  'two-sum-sorted': twoSumSorted,
+  'max-subarray': maxSubarray,
+  lis,
+  'max-window-sum': maxWindowSum,
+  'moving-sums': movingSums,
 };

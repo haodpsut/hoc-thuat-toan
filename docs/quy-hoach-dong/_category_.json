@@ -1,0 +1,10 @@
+{
+  "label": "Quy hoạch động",
+  "position": 8,
+  "className": "menu-dp",
+  "link": {
+    "type": "generated-index",
+    "slug": "/quy-hoach-dong",
+    "description": "Các bài toán quy hoạch động cơ bản trên mảng, kèm hình trực quan, code chạy được và bài tập có chấm."
+  }
+}

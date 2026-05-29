@@ -1,0 +1,40 @@
+---
+sidebar_position: 1
+title: Đảo ngược mảng
+description: Học đảo ngược mảng tại chỗ bằng hai con trỏ, với hình trực quan, code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Đảo ngược mảng
+
+Đảo ngược mảng (reverse array) là bài toán nhập môn kinh điển của kỹ thuật hai con trỏ. Nó cho thấy
+cách hai con trỏ chạy ngược chiều có thể xử lý mảng tại chỗ chỉ với O(1) bộ nhớ phụ.
+
+## Ý tưởng
+
+Đặt con trỏ lo ở đầu mảng và con trỏ hi ở cuối mảng. Đổi chỗ hai phần tử chúng đang trỏ tới, rồi cho
+lo tiến lên một bước và hi lùi xuống một bước. Lặp lại cho tới khi hai con trỏ gặp nhau ở giữa. Khi đó
+toàn bộ mảng đã được lật ngược.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="reverse-array" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="reverse-array" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="reverse-array" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="reverse-array" />
+
+## Tóm tắt
+
+- Hai con trỏ lo và hi chạy ngược chiều, gặp nhau ở giữa thì dừng.
+- Mỗi bước đổi chỗ một cặp, tổng cộng khoảng `n/2` lần, độ phức tạp `O(n)`.
+- Làm việc ngay trên mảng gốc nên chỉ tốn `O(1)` bộ nhớ phụ.

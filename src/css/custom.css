@@ -76,6 +76,9 @@
 .menu-graph > .menu__list-item-collapsible > .menu__link::before { content: '🕸️'; margin-right: 9px; }
 .menu-tree > .menu__list-item-collapsible > .menu__link::before { content: '🌳'; margin-right: 9px; }
 .menu-array > .menu__list-item-collapsible > .menu__link::before { content: '🧮'; margin-right: 9px; }
+.menu-twopointer > .menu__list-item-collapsible > .menu__link::before { content: '↔️'; margin-right: 9px; }
+.menu-dp > .menu__list-item-collapsible > .menu__link::before { content: '📈'; margin-right: 9px; }
+.menu-window > .menu__list-item-collapsible > .menu__link::before { content: '🪟'; margin-right: 9px; }
 /* Intro (a top-level doc, not a category) gets a home icon. */
 .menu__link[href='/']::before { content: '🏠'; margin-right: 9px; }
 

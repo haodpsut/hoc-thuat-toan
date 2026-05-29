@@ -1,0 +1,40 @@
+---
+sidebar_position: 3
+title: Tổng hai số (mảng đã sắp)
+description: Học cách tìm cặp số có tổng cho trước trên mảng đã sắp bằng hai con trỏ, với hình trực quan, code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tổng hai số (mảng đã sắp)
+
+Tổng hai số (two sum) trên mảng đã sắp là minh hoạ đẹp cho sức mạnh của hai con trỏ: nhờ mảng được sắp
+sẵn, mỗi bước ta loại được một lựa chọn, đưa lời giải từ O(n²) xuống O(n).
+
+## Ý tưởng
+
+Đặt con trỏ lo ở đầu và con trỏ hi ở cuối, rồi xét tổng a[lo] + a[hi]. Nếu tổng đúng bằng đích thì đã
+tìm thấy cặp. Nếu tổng nhỏ hơn đích, ta cần một giá trị lớn hơn nên dời lo lên. Nếu tổng lớn hơn đích,
+ta cần một giá trị nhỏ hơn nên dời hi xuống. Cứ thế cho tới khi hai con trỏ gặp nhau.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="two-sum-sorted" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="two-sum-sorted" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="two-sum-sorted" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="two-sum-sorted" />
+
+## Tóm tắt
+
+- Yêu cầu mảng đã sắp tăng dần; lo ở đầu, hi ở cuối.
+- Tổng nhỏ thì tăng lo, tổng lớn thì giảm hi, bằng đích thì dừng.
+- Một lượt duyệt là đủ, độ phức tạp `O(n)`, bộ nhớ phụ `O(1)`.

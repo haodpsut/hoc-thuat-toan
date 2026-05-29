@@ -92,7 +92,7 @@ export function CuratedVisualizer({ algo }: { algo: Algorithm }) {
           />
           {algo.needsTarget && (
             <>
-              <label>Tìm giá trị</label>
+              <label>{algo.targetLabel ?? 'Tìm giá trị'}</label>
               <input
                 type="text"
                 value={targetText}

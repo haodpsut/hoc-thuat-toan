@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+title: Tổng trượt cửa sổ k
+description: Học cách sinh danh sách tổng trượt bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Tổng trượt cửa sổ k
+
+Lần này ta không chỉ giữ lại một tổng tốt nhất mà ghi lại tổng của tất cả các cửa sổ liên tiếp rộng
+`k`. Một mảng `n` phần tử có đúng `n - k + 1` cửa sổ như vậy.
+
+## Ý tưởng
+
+Vẫn dùng kỹ thuật cửa sổ trượt: tính tổng cửa sổ đầu rồi ghi vào danh sách kết quả. Sau đó mỗi lần
+trượt cửa sổ sang phải, ta cộng phần tử mới và trừ phần tử cũ để cập nhật tổng trong `O(1)`, rồi ghi
+tổng hiện tại vào kết quả. Danh sách tổng trượt là nền tảng cho nhiều bài toán dãy con liên tiếp như
+trung bình trượt hay làm mượt tín hiệu.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="moving-sums" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="moving-sums" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="moving-sums" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="moving-sums" />
+
+## Tóm tắt
+
+- Có đúng `n - k + 1` cửa sổ liên tiếp rộng `k`.
+- Mỗi tổng được cập nhật trong `O(1)`, tổng thời gian `O(n)`, bộ nhớ kết quả `O(n)`.
+- Ca biên: `k <= 0` hoặc `k > len(a)` thì trả về danh sách rỗng.

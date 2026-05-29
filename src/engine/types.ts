@@ -112,8 +112,9 @@ export interface Algorithm {
   curated?: (a: number[], target?: number) => Step[];
   arrayLegend?: [string, string][]; // legend [highlightClass, label] for the bar view
   defaultInput?: string; // default array text for the input box
-  needsTarget?: boolean; // show a "tìm giá trị" box and pass it to curated
+  needsTarget?: boolean; // show a numeric input box and pass it to curated
   defaultTarget?: number;
+  targetLabel?: string; // label for that input (default "Tìm giá trị")
 
   // Graph / tree visualization:
   nodes?: GraphNode[];

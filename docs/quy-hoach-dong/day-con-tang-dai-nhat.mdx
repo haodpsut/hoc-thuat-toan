@@ -1,0 +1,41 @@
+---
+sidebar_position: 2
+title: Dãy con tăng dài nhất
+description: Học quy hoạch động tìm LIS bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Dãy con tăng dài nhất
+
+Dãy con tăng dài nhất (LIS) là dãy con giữ nguyên thứ tự, không cần liên tiếp, sao cho các phần tử
+tăng ngặt và có nhiều phần tử nhất. Ta giải bằng quy hoạch động trong thời gian `O(n²)`.
+
+## Ý tưởng
+
+Gọi `dp[i]` là độ dài dãy con tăng dài nhất kết thúc tại `i`. Để tính `dp[i]`, ta nhìn lại mọi vị trí
+`j` đứng trước `i`: nếu `a[j] < a[i]` thì có thể nối `a[i]` vào dãy con kết thúc tại `j`, cho độ dài
+`dp[j] + 1`. Lấy giá trị lớn nhất trong các phương án đó, nếu không có thì `dp[i] = 1`. Đáp số là giá
+trị lớn nhất trong toàn bộ mảng `dp`.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="lis" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="lis" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="lis" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="lis" />
+
+## Tóm tắt
+
+- `dp[i]` là độ dài LIS kết thúc tại `i`, bằng `1 + max(dp[j])` với `j < i` và `a[j] < a[i]`.
+- Mỗi cặp `(i, j)` được xét một lần, nên độ phức tạp là `O(n²)`, bộ nhớ `O(n)`.
+- Có thể truy vết mảng `prev` để dựng lại một dãy con tăng dài nhất cụ thể.
