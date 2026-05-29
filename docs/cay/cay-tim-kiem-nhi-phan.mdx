@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+title: Cây tìm kiếm nhị phân
+description: Học cây tìm kiếm nhị phân bằng hình cây trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Cây tìm kiếm nhị phân
+
+Cây tìm kiếm nhị phân (binary search tree) là một cấu trúc dữ liệu cho phép chèn, tìm kiếm và xoá
+nhanh, đồng thời giữ dữ liệu ở dạng có thứ tự. Nó là bước đệm để hiểu các cây cân bằng nâng cao như
+AVL hay cây đỏ đen.
+
+## Ý tưởng
+
+Quy tắc của cây tìm kiếm nhị phân rất đơn giản: tại mỗi nút, mọi giá trị trong cây con bên **trái**
+đều **nhỏ hơn** nút, mọi giá trị trong cây con bên **phải** đều **lớn hơn hoặc bằng** nút.
+
+Nhờ quy tắc này, khi chèn hay tìm một giá trị, tại mỗi nút ta chỉ cần so sánh một lần rồi rẽ trái
+hoặc phải, bỏ qua hẳn một nửa cây còn lại. Đó chính là tinh thần chia để trị giống tìm kiếm nhị phân
+trên mảng, nhưng trên một cấu trúc động.
+
+## Trực quan hoá
+
+Quan sát cây lớn dần khi từng giá trị được chèn vào. Mỗi lần chèn, ta đi từ gốc, so sánh và rẽ
+nhánh cho tới khi gặp chỗ trống.
+
+<Algo kind="visualizer" algo="binary-search-tree" />
+
+## Chạy code Python từng bước
+
+Bản chạy được dưới đây dựng cây rồi duyệt giữa để in ra dãy tăng dần. Bấm **Chạy** rồi tua từng dòng.
+
+<Algo kind="playback" algo="binary-search-tree" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="binary-search-tree" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="binary-search-tree" />
+
+## Tóm tắt
+
+- Mỗi nút: trái nhỏ hơn, phải lớn hơn hoặc bằng.
+- Chèn và tìm tốn `O(h)` với h là chiều cao cây.
+- Cây cân bằng cho `O(log n)`, cây suy biến (dữ liệu vào đã sắp) cho `O(n)`.
+- Duyệt giữa một cây tìm kiếm nhị phân luôn cho ra dãy tăng dần.

@@ -1,0 +1,10 @@
+{
+  "label": "Đồ thị",
+  "position": 3,
+  "className": "menu-graph",
+  "link": {
+    "type": "generated-index",
+    "slug": "/do-thi",
+    "description": "Các thuật toán trên đồ thị, mỗi bài kèm hình trực quan node và cạnh, code chạy được và bài tập có chấm."
+  }
+}

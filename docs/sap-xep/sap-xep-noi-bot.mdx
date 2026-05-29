@@ -1,0 +1,40 @@
+---
+sidebar_position: 2
+title: Sắp xếp nổi bọt
+description: Học sắp xếp nổi bọt bằng hình trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Sắp xếp nổi bọt
+
+Sắp xếp nổi bọt (bubble sort) là thuật toán sắp xếp đơn giản nhất để bắt đầu: chỉ cần so sánh hai
+phần tử cạnh nhau và đổi chỗ nếu chúng sai thứ tự.
+
+## Ý tưởng
+
+Lặp đi lặp lại việc duyệt mảng, mỗi lần so sánh từng cặp phần tử cạnh nhau và đổi chỗ nếu trái thứ
+tự. Sau mỗi vòng, phần tử lớn nhất trong phần chưa sắp sẽ "nổi" dần về cuối, giống bọt khí nổi lên.
+Cứ thế, phần đã sắp ở cuối mảng lớn dần.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="bubble-sort" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="bubble-sort" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="bubble-sort" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="bubble-sort" />
+
+## Tóm tắt
+
+- Mỗi vòng đẩy phần tử lớn nhất còn lại về cuối.
+- Độ phức tạp `O(n²)`, có thể dừng sớm để đạt `O(n)` khi mảng đã gần sắp.
+- Dễ hiểu nhưng chậm, chủ yếu dùng để học. Thực tế dùng các thuật toán `O(n log n)`.

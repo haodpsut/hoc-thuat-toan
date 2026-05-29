@@ -1,0 +1,42 @@
+---
+sidebar_position: 1
+title: Kiểm tra số nguyên tố
+description: Duyệt mảng và kiểm tra số nguyên tố bằng hình trực quan, chạy code Python và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Kiểm tra số nguyên tố
+
+Đây là một ví dụ điển hình về **duyệt mảng**: ta đi qua từng phần tử và áp dụng một phép kiểm tra
+cho mỗi phần tử. Phép kiểm tra ở đây là xác định một số có phải số nguyên tố hay không.
+
+## Ý tưởng
+
+Số nguyên tố là số tự nhiên lớn hơn 1 và chỉ chia hết cho 1 và chính nó. Để kiểm tra số v, ta thử
+chia v cho các số d bắt đầu từ 2. Điểm mấu chốt: chỉ cần thử tới khi `d*d > v`, vì nếu v có một ước
+lớn hơn căn bậc hai thì chắc chắn nó cũng có một ước nhỏ hơn căn bậc hai mà ta đã gặp trước đó.
+
+Khi áp lên cả mảng, ta duyệt từng phần tử và tô màu: xanh nếu là số nguyên tố, mờ đi nếu không.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="prime-check" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="prime-check" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="prime-check" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="prime-check" />
+
+## Tóm tắt
+
+- Chỉ cần thử ước tới căn bậc hai của số cần kiểm tra.
+- Kiểm tra một số tốn khoảng `O(√v)`; kiểm tra cả mảng tốn `O(n·√v)`.
+- Muốn xét mọi số tới một ngưỡng lớn, dùng sàng Eratosthenes sẽ nhanh hơn nhiều.

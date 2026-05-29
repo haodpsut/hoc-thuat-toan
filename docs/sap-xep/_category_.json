@@ -1,0 +1,10 @@
+{
+  "label": "Sắp xếp",
+  "position": 2,
+  "className": "menu-sort",
+  "link": {
+    "type": "generated-index",
+    "slug": "/sap-xep",
+    "description": "Các thuật toán sắp xếp, mỗi bài kèm hình trực quan, code chạy được và bài tập có chấm."
+  }
+}

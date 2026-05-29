@@ -1,0 +1,42 @@
+---
+sidebar_position: 2
+title: Duyệt theo chiều sâu (DFS)
+description: Học DFS bằng hình đồ thị trực quan, chạy code Python từng bước và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Duyệt theo chiều sâu (DFS)
+
+DFS (depth-first search) duyệt đồ thị bằng cách đi sâu hết một nhánh rồi mới quay lui. Đây là cách
+duyệt tự nhiên khi cài bằng đệ quy, và là nền tảng cho dò đường, phát hiện chu trình, sắp xếp tô-pô.
+
+## Ý tưởng
+
+Từ một đỉnh, ta đánh dấu nó đã thăm rồi lần lượt đi sâu vào từng đỉnh kề chưa thăm. Khi một nhánh
+đã cạn (không còn đỉnh kề chưa thăm), ta quay lui về đỉnh trước đó để thử nhánh khác. Quá trình này
+dùng một ngăn xếp, mà cách gọn nhất là dùng chính ngăn xếp đệ quy của hàm.
+
+## Trực quan hoá
+
+Quan sát đường đi sâu (các đỉnh vàng tạo thành ngăn xếp đệ quy) và thứ tự duyệt.
+
+<Algo kind="visualizer" algo="dfs" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="dfs" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="dfs" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="dfs" />
+
+## Tóm tắt
+
+- DFS đi sâu trước, quay lui sau; BFS thì lan rộng theo lớp.
+- Độ phức tạp `O(V + E)`, bộ nhớ `O(V)`.
+- Cài gọn nhất bằng đệ quy; cẩn thận tràn ngăn xếp với đồ thị rất sâu.

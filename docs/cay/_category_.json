@@ -1,0 +1,10 @@
+{
+  "label": "Cây",
+  "position": 4,
+  "className": "menu-tree",
+  "link": {
+    "type": "generated-index",
+    "slug": "/cay",
+    "description": "Các cấu trúc dữ liệu và thuật toán trên cây, kèm hình trực quan, code chạy được và bài tập có chấm."
+  }
+}

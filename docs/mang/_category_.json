@@ -1,0 +1,10 @@
+{
+  "label": "Mảng",
+  "position": 5,
+  "className": "menu-array",
+  "link": {
+    "type": "generated-index",
+    "slug": "/mang",
+    "description": "Các thuật toán duyệt và xử lý mảng, kèm hình trực quan, code chạy được và bài tập có chấm."
+  }
+}

@@ -1,0 +1,49 @@
+---
+sidebar_position: 1
+title: Duyệt theo chiều rộng (BFS)
+description: Học BFS bằng hình đồ thị trực quan, chạy code Python từng bước và bài tập có chấm tự động.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Duyệt theo chiều rộng (BFS)
+
+BFS (breadth-first search) là cách duyệt đồ thị theo từng lớp, lan ra như sóng nước từ một đỉnh
+xuất phát. Đây là nền tảng cho nhiều bài toán: tìm đường ngắn nhất theo số cạnh, kiểm tra liên
+thông, tô màu hai phía, và nhiều thuật toán đồ thị khác.
+
+## Ý tưởng
+
+BFS dùng một **hàng đợi**. Ta đưa đỉnh xuất phát vào hàng đợi, rồi lặp lại: lấy đỉnh ở đầu hàng ra
+xử lý, và đưa mọi đỉnh kề chưa thăm của nó vào cuối hàng. Vì hàng đợi xử lý theo thứ tự vào trước
+ra trước, các đỉnh được thăm theo đúng thứ tự khoảng cách tăng dần tính theo số cạnh.
+
+Một điểm quan trọng: ta đánh dấu một đỉnh là đã thăm **ngay khi đưa vào hàng đợi**, không phải khi
+lấy ra. Nếu không, một đỉnh có thể bị đưa vào hàng đợi nhiều lần.
+
+## Trực quan hoá
+
+Chọn đỉnh bắt đầu rồi chạy từng bước. Quan sát hàng đợi thay đổi và các đỉnh đổi màu theo trạng thái.
+
+<Algo kind="visualizer" algo="bfs" />
+
+## Chạy code Python từng bước
+
+Đây là code thật. Bấm **Chạy** để xem từng dòng thực thi và các biến thay đổi theo thời gian thực.
+
+<Algo kind="playback" algo="bfs" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="bfs" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="bfs" />
+
+## Tóm tắt
+
+- BFS duyệt đồ thị theo từng lớp bằng một hàng đợi.
+- Đánh dấu đã thăm ngay khi đưa vào hàng đợi.
+- Độ phức tạp `O(V + E)`, bộ nhớ `O(V)`.
+- BFS cho ngay đường đi ngắn nhất theo số cạnh trên đồ thị không trọng số.

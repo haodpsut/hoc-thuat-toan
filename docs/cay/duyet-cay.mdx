@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+title: Duyệt cây nhị phân
+description: Học duyệt cây nhị phân (in-order, pre-order) bằng hình trực quan và bài tập có chấm.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Duyệt cây nhị phân
+
+Duyệt cây là thăm lần lượt mọi nút của cây theo một quy tắc. Đây là thao tác cơ bản nhất khi làm
+việc với cây, và là cách ta đọc ra dữ liệu chứa trong cây.
+
+## Ý tưởng
+
+Với cây nhị phân, ba kiểu duyệt phổ biến khác nhau ở chỗ thăm gốc lúc nào:
+
+- **Duyệt giữa (in-order)**: trái, gốc, phải. Trên cây tìm kiếm nhị phân cho ra dãy tăng dần.
+- **Duyệt trước (pre-order)**: gốc, trái, phải. Hữu ích khi sao chép hoặc lưu cây.
+- **Duyệt sau (post-order)**: trái, phải, gốc. Hữu ích khi xoá cây.
+
+Phần trực quan dưới đây minh hoạ duyệt giữa.
+
+## Trực quan hoá
+
+<Algo kind="visualizer" algo="tree-traversal" />
+
+## Chạy code Python từng bước
+
+<Algo kind="playback" algo="tree-traversal" />
+
+## Phân tích độ phức tạp
+
+<Algo kind="complexity" algo="tree-traversal" />
+
+## Luyện tập
+
+<Algo kind="practice" algo="tree-traversal" />
+
+## Tóm tắt
+
+- Duyệt giữa trên cây tìm kiếm nhị phân cho ra dãy tăng dần.
+- Ba kiểu duyệt chỉ khác nhau ở thứ tự ba thao tác trái, gốc, phải.
+- Duyệt cây là `O(n)`, bộ nhớ `O(h)` cho ngăn xếp đệ quy.

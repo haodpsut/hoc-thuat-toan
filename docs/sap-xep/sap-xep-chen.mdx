@@ -1,0 +1,55 @@
+---
+sidebar_position: 1
+title: Sắp xếp chèn
+description: Học sắp xếp chèn bằng hình trực quan, chạy code Python từng bước và bài tập có chấm tự động.
+---
+
+import Algo from '@site/src/widgets/Algo';
+
+# Sắp xếp chèn
+
+Sắp xếp chèn (insertion sort) là một trong những thuật toán sắp xếp đầu tiên nên học, vì nó phản
+ánh đúng cách con người sắp một bộ bài trên tay: cầm từng lá mới và chèn nó vào đúng chỗ giữa
+những lá đã xếp.
+
+## Ý tưởng
+
+Ta coi phần đầu của mảng là một đoạn đã được sắp xếp. Ban đầu đoạn này chỉ có một phần tử. Sau đó,
+lần lượt lấy từng phần tử kế tiếp, gọi là **key**, rồi chèn nó vào đúng vị trí trong đoạn đã sắp
+bằng cách dịch các phần tử lớn hơn key sang phải. Cứ thế cho tới khi cả mảng được sắp.
+
+## Trực quan hoá
+
+Nhập mảng của bạn rồi chạy từng bước. Hình được sinh theo đúng dữ liệu bạn nhập, có thuyết minh và
+đồng bộ với dòng code đang chạy.
+
+<Algo kind="visualizer" algo="insertion-sort" />
+
+## Chạy code Python từng bước
+
+Đây là code thật. Bạn có thể sửa tuỳ ý rồi bấm **Chạy**: trình duyệt chạy Python thật và ghi lại
+từng dòng thực thi để bạn tua lại, kèm bảng biến thay đổi theo thời gian thực.
+
+<Algo kind="playback" algo="insertion-sort" />
+
+## Phân tích độ phức tạp
+
+Vì sao thuật toán nhanh hay chậm? Hãy nhìn vào số phép so sánh ở trường hợp xấu nhất, đo bằng dữ
+liệu thật.
+
+<Algo kind="complexity" algo="insertion-sort" />
+
+## Luyện tập
+
+Tự cài đặt rồi bấm chấm bài. Code của bạn chạy thật và được kiểm với nhiều ca, gồm cả các ca biên
+như mảng rỗng, mảng đã sắp sẵn, có phần tử trùng hoặc số âm.
+
+<Algo kind="practice" algo="insertion-sort" />
+
+## Tóm tắt
+
+- Sắp xếp chèn xây dần một đoạn đã sắp ở đầu mảng, mỗi lần chèn thêm một phần tử.
+- Trường hợp tốt nhất (mảng gần như đã sắp) chạy rất nhanh, chỉ khoảng `O(n)`.
+- Trường hợp xấu nhất (mảng sắp ngược) là `O(n²)`.
+- Sắp xếp tại chỗ, chỉ tốn thêm bộ nhớ `O(1)`.
+- Phù hợp với mảng nhỏ hoặc gần như đã sắp; với dữ liệu lớn nên dùng các thuật toán `O(n log n)`.
